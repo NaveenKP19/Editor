@@ -1,0 +1,438 @@
+/* ===========================
+   Main Layout Container
+=========================== */
+.ribbon-container {
+  background-color: #f3f2f1;
+  padding: 4px 16px 8px 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e1dfdd;
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  margin: 0px 0px 16px 0px; /* Offsets padding from the mat-dialog container */
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+  border-bottom: 1px solid #e0e0e0;
+
+  .header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #212529;
+    letter-spacing: 0.2px;
+    margin-top: 10px;
+
+    .header-icon {
+      color: #1976d2; /* Accent blue color */
+      font-size: 22px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+/* ===========================
+   Ribbon Tabs
+=========================== */
+.ribbon-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 4px;
+  padding-left: 8px;
+  .tab-btn {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #605e5c;
+    padding: 4px 2px;
+    cursor: pointer;
+    position: relative;
+    &.active {
+      color: #005a9e;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: #005a9e;
+        border-radius: 2px;
+      }
+    }
+    &:hover:not(.active) {
+      color: #323130;
+    }
+  }
+}
+/* ===========================
+   Ribbon Card Box
+=========================== */
+.ribbon-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e1dfdd;
+  border-radius: 8px;
+  padding: 6px 12px;
+  gap: 8px;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.05);
+}
+/* ===========================
+   Ribbon Group Setup
+=========================== */
+.ribbon-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+.group-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.group-row {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.group-title {
+  font-size: 11px;
+  color: #605e5c;
+  margin-top: auto;
+  text-align: center;
+  user-select: none;
+}
+/* Vertical divider between groups */
+.ribbon-divider {
+  width: 1px;
+  height: 54px;
+  background-color: #e1dfdd;
+  margin: 0 4px;
+}
+/* ===========================
+   Clipboard Special Styling
+=========================== */
+.clipboard-layout {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.vertical-actions {
+  display: flex;
+  flex-direction: column;
+}
+.ribbon-btn-text {
+  height: 24px !important;
+  line-height: 24px !important;
+  padding: 0 6px !important;
+  min-width: unset !important;
+  font-size: 12px;
+  color: #323130;
+  mat-icon {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+}
+.format-painter-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 44px !important;
+  padding: 0 8px !important;
+  min-width: unset !important;
+  border-radius: 4px;
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+  .highlight-icon {
+    color: #d83b01;
+  }
+  .btn-text {
+    font-size: 11px;
+    line-height: 12px;
+    color: #323130;
+  }
+}
+/* ===========================
+   Compact Icon Buttons
+=========================== */
+.icon-btn-sm {
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  padding: 0 !important;
+  border-radius: 4px !important;
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: #323130;
+  }
+  &:hover {
+    background-color: #f3f2f1;
+  }
+}
+/* ===========================
+   Compact Form Fields
+=========================== */
+
+.compact-field {
+  height: 26px;
+
+  ::ng-deep {
+
+    .mat-mdc-text-field-wrapper {
+      height: 26px !important;
+      padding: 0 8px !important;
+    }
+
+    .mat-mdc-form-field-flex {
+      height: 26px !important;
+      align-items: center !important;
+    }
+
+    .mat-mdc-select-value-text,
+    .mat-mdc-select {
+      font-size: 12px !important;
+    }
+
+    .mat-mdc-form-field-subscript-wrapper,
+    .mat-mdc-form-field-bottom-align {
+      display: none !important;
+    }
+
+    .mat-mdc-outlined-text-field-container {
+      height: 26px !important;
+    }
+  }
+}
+
+
+/* ===========================
+   Font Size Control
+=========================== */
+
+.font-size-control {
+  display: flex;
+  align-items: center;
+
+  width: 55px;
+  height: 26px;
+
+  border: 1px solid #c7c7c7;
+  border-radius: 4px;
+
+  background: #fff;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+/* ===========================
+   Font Size Input
+=========================== */
+
+.font-size-input {
+  width: 34px;
+  height: 24px;
+
+  border: none;
+  outline: none;
+
+  padding: 0 3px;
+
+  text-align: center;
+
+  font-size: 12px;
+  font-family: inherit;
+
+  background: transparent;
+
+  box-sizing: border-box;
+}
+
+
+/* Remove number spinner */
+
+.font-size-input::-webkit-inner-spin-button,
+.font-size-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.font-size-input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+
+/* ===========================
+   Dropdown Button
+=========================== */
+
+.font-size-dropdown-btn {
+  width: 20px !important;
+  min-width: 20px !important;
+
+  height: 24px !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: none !important;
+  border-left: 1px solid #c7c7c7 !important;
+
+  border-radius: 0 !important;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Dropdown icon */
+
+.font-size-dropdown-btn mat-icon {
+  width: 18px;
+  height: 18px;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+
+/* Existing size box */
+
+.size-box {
+  width: 55px;
+}
+/* ===========================
+   Color Pickers
+=========================== */
+.color-picker-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f3f2f1;
+  }
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+  .yellow-underline {
+    color: #201f1e;
+    border-bottom: 3px solid #fff100;
+  }
+  .red-underline {
+    color: #201f1e;
+    border-bottom: 3px solid #a80000;
+  }
+  input[type="color"] {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+}
+/* ===========================
+   Utilities & Canvas Layout
+=========================== */
+.spacer {
+  flex: 1;
+}
+.collapse-btn {
+  align-self: flex-start;
+}
+.designer {
+  flex: 1;
+  display: flex;
+  height: auto;
+  overflow: hidden;
+}
+.toolbar {
+  width: 200px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  button {
+    height: 36px;
+  }
+}
+.canvas-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f3f2f1;
+  
+  /* Enable scrollbars when inner content overflows */
+  overflow: auto; 
+  
+  /* Ensure padding doesn't get lost when scrolling */
+  padding: 20px; 
+}
+
+/* Ensure the inner canvas or image element retains its full size */
+.canvas-container > * {
+  flex-shrink: 0; /* Prevents the inner canvas/image from shrinking to fit */
+  margin: auto;   /* Keeps the content centered if smaller than container */
+}
+canvas {
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.signature-dialog-panel .mat-mdc-dialog-container .mdc-dialog__surface {
+  // padding: 8px;
+  overflow-x: hidden;
+}
+
+.signature-name-container {
+  // margin-bottom: 12px;
+background: #fff;
+  .full-width-field {
+    width: 900px;
+    // justify-content: center;
+
+  }
+}
+.dialog-actions {
+  // margin-top: 4px;
+  gap: 8px;
+}
+
+.signname{
+  margin-left: 50px;
+  margin-right: 50px;
+  height: min-content;
+  width: max-content;
+  // border-color: #a80000;
+  // border: solid 5px;
+}
